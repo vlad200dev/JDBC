@@ -28,12 +28,14 @@
 # values ('test2','test2');
 
 
-create table book(
-    id int not null primary key auto_increment,
-    title varchar(45) not null,
-    description varchar(45) not null,
-    rating double,
-    published date,
-    created date,
-    icode longblob
-)
+# create table book(
+# #     id int not null primary key auto_increment,
+# #     title varchar(45) not null,
+# #     description varchar(45) not null,
+# #     rating double,
+# #     published date,
+# #     created date,
+# #     icode longblob
+# # )
+
+# select * from employees;
