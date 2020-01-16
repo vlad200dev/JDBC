@@ -2,8 +2,8 @@ package classes;
 
 import java.sql.*;
 /**
- * Stored Procedures.
- * Это заранее подготовленный sql код, который можно применять.Применять сразу для всей установленной выборки
+ * Stored Procedures. IN
+ * Stored Procedures - Это заранее подготовленный sql код, который можно применять.Применять сразу для всей установленной выборки
  */
 public class Main4 {
     private static Connection connection;
@@ -30,12 +30,12 @@ public class Main4 {
 
         //PrepareStored procedure call
         System.out.println("Calling stored procedure");
-        statement = connection.prepareCall("{call increase_salaries_for_department(?,?)}");
+        CallableStatement myCall = connection.prepareCall("{call increase_salaries_for_department(?,?)}");
         // Set parameters for required pool
-        ((CallableStatement) statement).setString(1,theDepartment);
-        ((CallableStatement) statement).setDouble(2,theIncreaseAmount);
+        myCall.setString(1,theDepartment);
+        myCall.setDouble(2,theIncreaseAmount);
         //call stored procedure
-        ((CallableStatement) statement).execute();
+        myCall.execute();
         System.out.println("Finished calling stored procedure");
 
         //show salaries after the increase

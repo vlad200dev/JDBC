@@ -9,7 +9,7 @@ public class Main2 {
         private static Connection connection;
         private static final String url = "jdbc:mysql://localhost:3306/devcolibrijdbc";
         private static final String username = "root";
-        private static final String password = "59gkCz5HU7*a";
+        private static final String password = "root";
 
     public static void main(String[] args) {
         Main2.connect();

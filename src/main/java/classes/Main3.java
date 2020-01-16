@@ -8,6 +8,7 @@ import java.util.Calendar;
 
 /**
  * preparedStatement
+ * PreparedStatement запросы изначально скомпилированны это дает прирост скорости выполнения
  */
 public class Main3 {
     private static Connection connection;
@@ -27,15 +28,15 @@ public class Main3 {
 
         System.out.println("connection established");
 
-//        preparedStatement = connection.prepareStatement(INSERT_INTO);
-//        preparedStatement.setInt(1,2);
-//        preparedStatement.setString(2,"War and Peace");
-//        preparedStatement.setString(3,"Roman");
-//        preparedStatement.setDouble(4,126);
-//        preparedStatement.setDate(5,new Date(Calendar.DATE));
-//        preparedStatement.setDate(6,new Date(Calendar.DATE-5));
-//        preparedStatement.setBlob(7, new FileInputStream("tiger.png"));
-//        preparedStatement.execute();
+        preparedStatement = connection.prepareStatement(INSERT_INTO);
+        preparedStatement.setInt(1,2);
+        preparedStatement.setString(2,"War and Peace");
+        preparedStatement.setString(3,"Roman");
+        preparedStatement.setDouble(4,126);
+        preparedStatement.setDate(5,new Date(Calendar.DATE));
+        preparedStatement.setDate(6,new Date(Calendar.DATE-5));
+        preparedStatement.setBlob(7, new FileInputStream("tiger.png"));
+        preparedStatement.execute();
 
 //        preparedStatement = connection.prepareStatement(SELECT_ALL);
 //        ResultSet result = preparedStatement.executeQuery();
